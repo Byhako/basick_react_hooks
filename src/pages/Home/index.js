@@ -11,12 +11,12 @@ import {
 import { MovieIcon } from '../../icons';
 import styles from './styles';
 
-const Home = () => {
+const Home = ({ history }) => {
   const [search, setSearch] = useState('');
   const clases = styles();
 
   const handleSearch = () => {
-
+    history.push(`/results?movieName=${search}`);
   };
 
   return (

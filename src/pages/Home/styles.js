@@ -33,7 +33,7 @@ export default makeStyles({
     width: '90%'
   },
   buttonsContainer: {
-    marginTop: '0.5rem'
+    marginTop: '2rem'
   },
   searchButton: {
     marginLeft: '0.5rem'
