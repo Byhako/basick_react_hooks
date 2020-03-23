@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import queryString from 'querystring';
 
-import { searchMovie } from '../../redux/actions/search';
+import { searchMovie, clearMovies } from '../../redux/actions/search';
 import { movieResults, isSearchLoading } from '../../redux/selectors';
 
 import MovieResult from '../../components/MoviesResult';
@@ -37,6 +37,11 @@ const Results = ({ location, history }) => {
     return <div />;
   };
 
+  const goBack = () => {
+    dispatch(clearMovies());
+    history.push('/');
+  }
+
   return (
     <Container className={classes.container}>
       <Grid className={classes.titleContainer}>
@@ -46,7 +51,7 @@ const Results = ({ location, history }) => {
         <Button
           color='primary'
           className={classes.btn}
-          onClick={() => history.push('/')}
+          onClick={goBack}
         >Regresar</Button>
       </Grid>
       {renderMovies()}

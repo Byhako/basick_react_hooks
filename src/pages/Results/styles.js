@@ -2,8 +2,7 @@ import { makeStyles } from '@material-ui/styles';
 
 export default makeStyles({
   container: {
-    paddingLeft: 50,
-    paddingRight: 50,
+    backgroundColor: 'aliceblue',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',

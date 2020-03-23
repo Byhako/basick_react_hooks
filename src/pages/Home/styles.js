@@ -11,6 +11,7 @@ export default makeStyles({
     height: '100vh',
     ...centeredObj,
     flexDirection: 'column',
+    backgroundColor: 'aliceblue'
   },
   cardContainer: {
     ...centeredObj,

@@ -19,6 +19,12 @@ const Home = ({ history }) => {
     history.push(`/results?movieName=${search}`);
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      history.push(`/results?movieName=${search}`);
+    }
+  }
+
   return (
     <Container className={classes.container}>
       <Card className={classes.cardContainer}>
@@ -36,6 +42,7 @@ const Home = ({ history }) => {
           value={search}
           placeholder='Buscar'
           onChange={(e) => setSearch(e.target.value)}
+          onKeyDown={handleKeyDown}
         />
 
         <Grid className={classes.buttonsContainer}>
