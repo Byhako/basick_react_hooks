@@ -4,6 +4,7 @@ export default makeStyles({
   container: {
     padding: 5,
     width: '70%',
+    backgroundColor: 'aliceblue'
   },
   poster: {
     width: 200,
