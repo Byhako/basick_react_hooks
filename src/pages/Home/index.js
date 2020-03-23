@@ -13,32 +13,32 @@ import styles from './styles';
 
 const Home = ({ history }) => {
   const [search, setSearch] = useState('');
-  const clases = styles();
+  const classes = styles();
 
   const handleSearch = () => {
     history.push(`/results?movieName=${search}`);
   };
 
   return (
-    <Container className={clases.container}>
-      <Card className={clases.cardContainer}>
-        <Grid container className={clases.titleGridContainer}>
+    <Container className={classes.container}>
+      <Card className={classes.cardContainer}>
+        <Grid container className={classes.titleGridContainer}>
           <Grid>
-            <Typography className={clases.title}>Bienvenido</Typography>
+            <Typography className={classes.title}>Bienvenido</Typography>
           </Grid>
           <Grid>
-            <MovieIcon className={clases.movieIcon} />
+            <MovieIcon className={classes.movieIcon} />
           </Grid>
         </Grid>
 
         <TextField
-          className={clases.textFieldSearch}
+          className={classes.textFieldSearch}
           value={search}
           placeholder='Buscar'
           onChange={(e) => setSearch(e.target.value)}
         />
 
-        <Grid className={clases.buttonsContainer}>
+        <Grid className={classes.buttonsContainer}>
           <Button
             variant='contained'
             onClick={() => setSearch('')}
@@ -46,7 +46,7 @@ const Home = ({ history }) => {
             Limpiar
           </Button>
           <Button
-            className={clases.searchButton}
+            className={classes.searchButton}
             variant='contained'
             color='primary'
             onClick={handleSearch}
